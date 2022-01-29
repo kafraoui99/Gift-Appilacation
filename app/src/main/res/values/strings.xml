@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Gift App</string>
+
+
+    <string-array name="ages">
+        <item>0-5</item>
+        <item>5-10</item>
+        <item>10-20</item>
+        <item>20-30</item>
+        <item>30-40</item>
+        <item>40-50</item>
+        <item> > 50 </item>
+
+    </string-array>
+
+    <string-array name="sexe">
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+</resources>

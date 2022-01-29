@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:background="#981CA1"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:hint="rechercher"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selectionner un évenement "
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mariage_cat"
+                        android:onClick="afficherFormulaire"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mariage"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/robe" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/naissance"
+                        android:onClick="afficherFormulaire"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Naissance"
+                        android:layout_marginTop="20dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_baseline_cake_24"
+                        android:onClick="afficherFormulaire"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Anniversaire"
+                        android:layout_marginTop="20dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_baseline_local_dining_24"
+                        android:onClick="afficherFormulaire"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="dinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_baseline_event_24"
+                        android:onClick="afficherFormulaire"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Evenement"
+                        android:layout_marginTop="20dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:background="#C58850">
+
+        <Button
+            android:id="@+id/tendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tendance"
+            android:backgroundTint="@color/white"
+            android:textColor="#C58850"
+            />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/lun"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:onClick="envoyerImage"
+                    android:src="@drawable/lunitte_img"
+                    android:tag="lunitte_img" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Lunette"
+                    android:layout_marginTop="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/montre"
+                    android:tag="montre"
+                    android:onClick="envoyerImage"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Montre"
+                    android:layout_marginTop="20dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/iphone13"
+                    android:tag="iphone13"
+                    android:onClick="envoyerImage"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Iphone 13"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/verre"
+                    android:tag="verre"
+                    android:onClick="envoyerImage"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="verre"
+                    android:layout_marginTop="20dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/crayon"
+                    android:onClick="envoyerImage"
+                    android:tag="crayon"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="crayon"
+                    android:layout_marginTop="20dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/crayon"
+                    android:onClick="envoyerImage"
+                    android:tag="crayon"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="crayon"
+                    android:layout_marginTop="20dp"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        </HorizontalScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:background="#FF891C">
+
+            <Button
+                android:id="@+id/populaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="  Populaire "
+                android:textColor="#C58850"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/jackette"
+                            android:onClick="envoyerImage"
+                            android:tag="jackette"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="jackette"
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/bracelet"
+                            android:onClick="envoyerImage"
+                            android:tag="bracelet"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="bracelet"
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/robe"
+                            android:onClick="envoyerImage"
+                            android:tag="robe"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="robe"
+                            android:layout_marginTop="20dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/pelluche"
+                            android:onClick="envoyerImage"
+                            android:tag="pelluche"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Pelluche "
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="iphone 13"
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:background="#17FA47">
+
+            <Button
+                android:id="@+id/dernier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dernier Ajout "
+                android:backgroundTint="@color/white"
+                android:textColor="#C58850"
+                />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/ceiture"
+                            android:onClick="envoyerImage"
+                            android:tag="ceiture"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="ceinture"
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/jellaba"
+                            android:onClick="envoyerImage"
+                            android:tag="jellaba"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="robe"
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/cad"
+                            android:onClick="envoyerImage"
+                            android:tag="cad"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Sac A main "
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/doudou"
+                            android:onClick="envoyerImage"
+                            android:tag="doudou"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=" doudoune "
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:onClick="envoyerImage"
+                            android:src="@drawable/iphone13"
+                            android:tag="iphone13" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/iphone13"
+                            android:onClick="envoyerImage"
+                            android:tag="iphone13"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="iphone 13"
+                            android:layout_marginTop="20dp"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
